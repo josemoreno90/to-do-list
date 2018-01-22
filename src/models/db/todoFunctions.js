@@ -1,9 +1,13 @@
 const db = require('./conn')
 
-function listTodos() {
-  db.query(`SELECT * FROM todos;`)
+const listTodos = function() {
+  return db.query(`SELECT * FROM todos;`)
 }
 
-function createTodo(todo) {
+const createTodo = function(todo) {
   db.query(`INSERT INTO todos(description) VALUES('${description}')`);
+}
+
+module.exports = {
+  listTodos, createTodo
 }

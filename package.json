@@ -1,0 +1,23 @@
+{
+  "name": "to-do-list",
+  "version": "1.0.0",
+  "description": "A simple to do list app that allows one to add, edit, and delete todos on a SQL database.",
+  "main": "src/app.js",
+  "scripts": {
+    "db:create": "createdb to-do-list",
+    "db:load-schema": "psql -d to-do-list < src/models/db/schema.sql",
+    "db:seed": "psql -d to-do-list < src/models/db/dbseed.sql",
+    "db:reset": "dropdb to-do-list && createdb to-do-list && npm run db:load-schema && npm run db:seed",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josemoreno90/to-do-list.git"
+  },
+  "author": "Jose Moreno",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/josemoreno90/to-do-list/issues"
+  },
+  "homepage": "https://github.com/josemoreno90/to-do-list#readme"
+}

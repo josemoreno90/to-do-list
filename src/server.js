@@ -3,12 +3,11 @@ const app = express();
 const router = require("./server/router/index")
 const bodyParser = require("body-parser")
 
-
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 
+app.use(express.static('src/public'))
 app.use(bodyParser.urlencoded({ extended: false }))
-
 app.use('/', router)
 
 app.listen(3000, () => {

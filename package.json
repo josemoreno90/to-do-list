@@ -4,6 +4,7 @@
   "description": "A simple to do list app that allows one to add, edit, and delete todos on a SQL database.",
   "main": "src/app.js",
   "scripts": {
+    "start":"nodemon src/server.js",
     "db:create": "createdb to-do-list",
     "db:load-schema": "psql -d to-do-list < src/models/db/schema.sql",
     "db:seed": "psql -d to-do-list < src/models/db/dbseed.sql",
